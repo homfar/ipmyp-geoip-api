@@ -220,7 +220,7 @@ Content-Type: application/json
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ipmyp-geoip-api.git
+git clone https://github.com/homfar/ipmyp-geoip-api.git
 cd ipmyp-geoip-api
 ```
 
@@ -584,7 +584,7 @@ MAX_BATCH_SIZE=50
 ### 1. دریافت پروژه
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ipmyp-geoip-api.git
+git clone https://github.com/homfar/ipmyp-geoip-api.git
 cd ipmyp-geoip-api
 ```
 
