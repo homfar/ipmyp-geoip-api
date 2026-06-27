@@ -367,10 +367,6 @@ perIP: {
 
 ## Security Notes
 
-- `.env` is intentionally excluded from Git.
-- `.env.example` is safe to publish and contains placeholder values only.
-- MaxMind credentials must never be committed to GitHub.
-- The Docker image does not copy `.env` into the image.
 - The container runs as a non-root user.
 - `TRUST_PROXY=false` is the secure default.
 - JSONP is disabled by default.
@@ -378,21 +374,6 @@ perIP: {
 - `/batch` is limited by `MAX_BATCH_SIZE`.
 - CORS is explicit and not wildcard by default.
 - The API should run behind a trusted reverse proxy in production.
-
-## DevOps Portfolio Value
-
-This repository demonstrates several practical DevOps and platform engineering skills:
-
-- Dockerizing a Node.js production service
-- Using Docker Compose for multi-container deployment
-- Integrating Redis as an infrastructure dependency
-- Designing health and readiness checks
-- Handling environment-based configuration
-- Applying secure defaults for secrets and proxy headers
-- Implementing rate limiting for public APIs
-- Preparing services for reverse proxy deployment
-- Writing structured logs for observability
-- Adding GitHub Actions CI validation
 
 ## Roadmap
 
@@ -750,10 +731,6 @@ perIP: {
 
 ## نکات امنیتی مهم
 
-- فایل `.env` نباید در GitHub منتشر شود.
-- فایل `.env.example` فقط نمونه امن و بدون secret است.
-- اطلاعات MaxMind نباید commit شود.
-- Docker image فایل `.env` را داخل image کپی نمی‌کند.
 - container با user غیر root اجرا می‌شود.
 - `TRUST_PROXY=false` مقدار امن پیش‌فرض است.
 - JSONP به‌صورت پیش‌فرض غیرفعال است.
@@ -762,23 +739,7 @@ perIP: {
 - CORS به‌صورت wildcard نیست و فقط برای originهای مشخص فعال می‌شود.
 - برای Production بهتر است سرویس پشت reverse proxy معتبر اجرا شود.
 
-## ارزش پروژه برای رزومه DevOps
-
-این پروژه برای رزومه DevOps و Platform Engineering نشان می‌دهد که با موارد زیر آشنا هستید:
-
-- Dockerize کردن یک سرویس Node.js
-- اجرای چند سرویس با Docker Compose
-- استفاده از Redis به‌عنوان وابستگی زیرساختی
-- طراحی Health Check و Readiness Check
-- مدیریت پیکربندی با Environment Variable
-- حذف secret از repository و Docker image
-- پیاده‌سازی Rate Limit برای API عمومی
-- آماده‌سازی سرویس برای Reverse Proxy
-- لاگ ساختاریافته برای مانیتورینگ
-- ساخت CI ساده با GitHub Actions
-- رعایت اصول اولیه hardening برای API عمومی
-
-## مسیر توسعه پیشنهادی
+## مسیر توسعه
 
 - افزودن endpoint متریک Prometheus با مسیر `/metrics`
 - پشتیبانی از CIDR در whitelist و rate limit
