@@ -29,10 +29,6 @@ The service accepts an IP address, a domain name, or the current client request,
 
 For a public web-based IP lookup experience, visit [IPMYP.com](https://ipmyp.com/) — an online IP lookup and network tools platform.
 
-## SEO Keywords
-
-Self-hosted GeoIP API, IP geolocation API, IP lookup API, Docker GeoIP API, MaxMind GeoLite2 API, Redis rate limiting API, Node.js GeoIP service, IP address lookup API, ASN lookup API, ISP lookup API, domain to IP lookup, DevOps API project, containerized API, reverse proxy API deployment.
-
 ## Features
 
 - **IP geolocation lookup** for IPv4 and IPv6 addresses
@@ -401,10 +397,6 @@ This API can be used as a backend building block for IP lookup, network diagnost
 این پروژه برای استفاده در ابزارهای شبکه، سایت‌های بررسی IP، داشبوردهای امنیتی، سیستم‌های مانیتورینگ، سرویس‌های SaaS، پروژه‌های DevOps و APIهای داخلی بسیار مناسب است. هدف اصلی آن این است که بدون وابستگی مداوم به APIهای خارجی، بتوانید یک **GeoIP API اختصاصی، Self-hosted و قابل کنترل** داشته باشید.
 
 برای استفاده آنلاین از ابزار بررسی IP و ابزارهای شبکه، می‌توانید به [IPMYP.ir](https://ipmyp.ir/) مراجعه کنید.
-
-## کلمات کلیدی سئو فارسی
-
-GeoIP API، API موقعیت‌یابی IP، تشخیص کشور IP، تشخیص شهر IP، بررسی IP، IP Lookup، آی پی لوکاپ، سرویس GeoIP با Docker، سرویس MaxMind، بررسی ASN، تشخیص ISP، API بررسی آی پی، ابزار DevOps، پروژه Docker، ریت لیمیت با Redis، API سلف هاست.
 
 ## این پروژه دقیقاً چه کاری انجام می‌دهد؟
 
