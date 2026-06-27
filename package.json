@@ -1,0 +1,35 @@
+{
+  "name": "ipmyp-geoip-api",
+  "version": "1.1.0",
+  "description": "Production-ready self-hosted GeoIP API with Docker, Redis rate limiting and MaxMind GeoLite2.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "check": "node --check src/server.js && node --check src/config.js && node --check src/utils.js && node --check src/geoip.js && node --check src/rateLimit.js && node --check src/whitelist.js && node --check src/logger.js"
+  },
+  "keywords": [
+    "geoip",
+    "ip lookup",
+    "maxmind",
+    "redis",
+    "rate limit",
+    "docker",
+    "devops",
+    "nodejs",
+    "express",
+    "self-hosted"
+  ],
+  "author": "IPMYP",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "geolite2": "^3.4.1",
+    "ioredis": "^5.4.1",
+    "maxmind": "^4.3.18"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

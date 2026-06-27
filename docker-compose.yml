@@ -1,0 +1,38 @@
+services:
+  api:
+    build:
+      context: .
+      args:
+        MAXMIND_ACCOUNT_ID: ${MAXMIND_ACCOUNT_ID}
+        MAXMIND_LICENSE_KEY: ${MAXMIND_LICENSE_KEY}
+    container_name: ipmyp-geoip-api
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "127.0.0.1:${PORT:-3010}:3010"
+    depends_on:
+      redis:
+        condition: service_started
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3010/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+  redis:
+    image: redis:7-alpine
+    container_name: ipmyp-geoip-redis
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  redis_data:

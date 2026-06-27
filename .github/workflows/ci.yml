@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    env:
+      MAXMIND_ACCOUNT_ID: ${{ secrets.MAXMIND_ACCOUNT_ID }}
+      MAXMIND_LICENSE_KEY: ${{ secrets.MAXMIND_LICENSE_KEY }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Syntax check
+        run: npm run check
+
+      - name: Docker build when MaxMind secrets are available
+        if: ${{ env.MAXMIND_ACCOUNT_ID != '' && env.MAXMIND_LICENSE_KEY != '' }}
+        run: |
+          docker build \
+            --build-arg MAXMIND_ACCOUNT_ID="$MAXMIND_ACCOUNT_ID" \
+            --build-arg MAXMIND_LICENSE_KEY="$MAXMIND_LICENSE_KEY" \
+            -t ipmyp-geoip-api:test .
