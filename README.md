@@ -8,7 +8,7 @@
 
 **IPMYP GeoIP API** is a lightweight, production-oriented, self-hosted IP geolocation microservice built with **Node.js**, **Express**, **Redis**, **Docker**, and **MaxMind GeoLite2**. It provides IP address lookup, domain-to-IP resolution, GeoIP location data, ASN/ISP details, Redis-backed rate limiting, health checks, readiness checks, controlled CORS, optional whitelist protection, and batch lookup support.
 
-This repository is designed as a clean DevOps portfolio project and as a deployable infrastructure component for IP lookup platforms, network tools, monitoring systems, security dashboards, SaaS products, and internal automation services.
+This repository can be used as a deployable infrastructure component for IP lookup platforms, network tools, monitoring systems, security dashboards, SaaS products, and internal automation services.
 
 ---
 
